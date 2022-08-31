@@ -58,5 +58,5 @@ For the project to function within Eclipse the following steps must be taken:
      * The JavaFX library must be installed.
 	 * The location to the JavaFX jars must be added to the Classpath.
 	 * The following VM argument must be added:
-          --module-path "C:\your path\lib" --add-modules javafx.controls,javafx.fxml
+           --module-path "C:\your path\lib" --add-modules javafx.controls,javafx.fxml
 -----------------------------------------------------------------------------------------------------------------------------------------
