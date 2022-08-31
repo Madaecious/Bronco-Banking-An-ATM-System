@@ -1,0 +1,12 @@
+
+Database Information:
+
+The ATM Database/Schema:	'atm-db'
+Service:					Mysql@localhost:3306
+Root Password:				l9*K7&g6^D5%
+
+To start or stop the MySQL Server:
+
+Open the CMD or the Powershell as Administrator then:
+		net start MySQL80
+		net stop MySQL80

@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="634.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.OperatorController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="102.0" layoutX="130.0" layoutY="15.0" stroke="WHITE" strokeLineCap="ROUND" strokeType="INSIDE" width="375.0" />
+      <VBox layoutX="138.0" layoutY="19.0" prefHeight="95.0" prefWidth="357.0">
+         <children>
+            <Label fx:id="labelDate" alignment="CENTER" contentDisplay="RIGHT" maxWidth="1.7976931348623157E308" prefHeight="20.0" prefWidth="357.0" text="Tuesday, April 9, 2021" textAlignment="RIGHT">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Separator maxWidth="1.7976931348623157E308" prefHeight="5.0" prefWidth="720.0" />
+            <Label contentDisplay="CENTER" maxWidth="1.7976931348623157E308" prefHeight="51.0" prefWidth="357.0" text="  Bronco Banking" textAlignment="CENTER">
+               <font>
+                  <Font name="Copperplate Gothic Light" size="36.0" />
+               </font>
+            </Label>
+            <Separator maxWidth="1.7976931348623157E308" prefHeight="5.0" prefWidth="720.0" />
+            <HBox maxWidth="1.7976931348623157E308" prefHeight="20.0" prefWidth="313.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="72.0" text="Customer:">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="labelCustomer" prefHeight="17.0" prefWidth="139.0" text="John Doe" visible="false" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="102.0" text="Account:">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="labelAccountNumber" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="72.0" text="123456789" visible="false" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <ImageView fitHeight="102.0" fitWidth="102.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons/Logo.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="102.0" fitWidth="102.0" layoutX="519.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons/Logo.jpg" />
+         </image>
+      </ImageView>
+      <VBox fx:id="vBoxOptions" layoutX="13.0" layoutY="129.0" prefHeight="395.0" prefWidth="606.0" spacing="5.0" visible="false">
+         <children>
+            <Separator maxWidth="1.7976931348623157E308" prefWidth="200.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="3.0" />
+               </padding>
+            </Separator>
+            <TabPane fx:id="tabPaneOperator" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="327.0" prefWidth="606.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab fx:id="tabCustomer" text="Customer">
+                  <content>
+                    <AnchorPane maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="298.0" prefWidth="616.0">
+                           <children>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="250.0" layoutX="196.0" layoutY="34.0" stroke="WHITE" strokeType="INSIDE" width="412.0" />
+                              <VBox layoutX="207.0" layoutY="97.0" prefHeight="159.0" prefWidth="312.0" spacing="5.0">
+                                 <children>
+                                    <HBox prefHeight="17.0" prefWidth="278.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="109.0" text="Customer:">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="labelCustomerTabCustomer" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="177.0" text="John Doe" visible="false" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="17.0" prefWidth="278.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="109.0" text="Customer ID:">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="labelCustomerTabCustomerID" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="177.0" text="123456789" visible="false" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="17.0" prefWidth="278.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="109.0" text="Date of Birth:">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="labelCustomerTabDOB" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="177.0" text="January 1, 2000" visible="false" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="17.0" prefWidth="278.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="109.0" text="Home Address:">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="labelCustomerTabHomeAddress" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="177.0" text="1276 Hollywood Blvd." visible="false" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="17.0" prefWidth="278.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="109.0" text="Phone Number:">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="labelCustomerTabPhoneNumber" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="177.0" text="213-907-9987" visible="false" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="17.0" prefWidth="278.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="109.0" text="Email Address:">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="labelCustomerTabEmailAddress" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="177.0" text="johndoe@gmail.com" visible="false" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="17.0" prefWidth="278.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="109.0" text="ATM Access:">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="labelCustomerTabATMAccess" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="177.0" text="Yes" visible="false" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="5.0" layoutY="11.0" prefHeight="276.0" prefWidth="180.0">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="180.0" text="Customers">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <ListView fx:id="listViewCustomerTabCustomers" prefHeight="260.0" prefWidth="190.0" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="468.0" layoutY="80.0" prefHeight="142.0" prefWidth="114.0" spacing="10.0">
+                                 <children>
+                                    <ImageView fitHeight="116.0" fitWidth="120.0" onMouseClicked="#initialization" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons/Customer.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="buttonCustomerTabRestoreAccess" disable="true" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#restoreAccessButtonClicked" prefHeight="25.0" prefWidth="104.0" text="Restore Access" />
+                                 </children>
+                              </VBox>
+                              <Button fx:id="buttonSelectCustomer" layoutX="207.0" layoutY="46.0" mnemonicParsing="false" onMouseClicked="#selectCustomerButtonClicked" text="Select Customer" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab fx:id="tabAccount" text="Account">
+                  <content>
+                    <AnchorPane maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="298.0" prefWidth="672.0">
+                           <children>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="253.0" layoutX="185.0" layoutY="34.0" stroke="WHITE" strokeType="INSIDE" width="411.0" />
+                              <Button fx:id="buttonSelectAccount" layoutX="213.0" layoutY="46.0" mnemonicParsing="false" onMouseClicked="#selectAccountButtonClicked" text="Select Account" />
+                              <VBox layoutX="217.0" layoutY="83.0" prefHeight="154.0" prefWidth="280.0" spacing="5.0">
+                                 <children>
+                                    <HBox prefHeight="17.0" prefWidth="278.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="147.0" text="Account Number:">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="labelAccountTabAccountNumber" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="177.0" text="123456789" visible="false" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="17.0" prefWidth="278.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="147.0" text="Nickname:">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="labelAccountTabNickname" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="177.0" text="Recreational Cash" visible="false" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="17.0" prefWidth="278.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="147.0" text="Type:">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="labelAccountTabType" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="177.0" text="Checking" visible="false" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="17.0" prefWidth="278.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="147.0" text="Creation Date:">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="labelAccountTabCreationDate" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="177.0" text="April 15, 2021" visible="false" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="17.0" prefWidth="278.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="147.0" text="Associated Card:">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="labelAccountTabAssociatedCard" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="177.0" text="4564123454668890" visible="false" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="17.0" prefWidth="278.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="147.0" text="Frozen:">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="labelAccountTabAccountFrozen" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="177.0" text="No" visible="false" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="17.0" prefWidth="278.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="147.0" text="Balance:">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="labelAccountTabBalance" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="177.0" text="\$1209.55" visible="false" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="5.0" layoutY="11.0" prefHeight="276.0" prefWidth="180.0">
+                                 <children>
+                                    <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="193.0" text="Accounts">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <ListView fx:id="listViewAccountTabAccounts" prefHeight="260.0" prefWidth="190.0" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="472.0" layoutY="75.0" prefHeight="188.0" prefWidth="120.0" spacing="4.0">
+                                 <children>
+                                    <ImageView fitHeight="120.0" fitWidth="120.0" onMouseClicked="#accountTab" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons/Select%20Account.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="buttonAccountTabFreezeAccount" mnemonicParsing="false" onMouseClicked="#freezeAccountButtonClicked" prefHeight="25.0" prefWidth="115.0" text="Freeze Account" />
+                                    <Button fx:id="buttonAccountTabRecoverAccount" disable="true" mnemonicParsing="false" onMouseClicked="#recoverAccountButtonClicked" prefHeight="25.0" prefWidth="115.0" text="Recover Account" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab fx:id="tabTransactions" text="Transactions">
+                    <content>
+                      <AnchorPane maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="297.0" layoutX="-6.0" layoutY="7.0" stroke="WHITE" strokeType="INSIDE" width="612.0" />
+                              <VBox layoutX="6.0" layoutY="13.0" prefHeight="278.0" prefWidth="164.0" spacing="5.0">
+                                 <children>
+                                    <Pane maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="200.0">
+                                       <children>
+                                          <ImageView fitHeight="60.0" fitWidth="30.0" layoutX="78.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@icons/Make%20Deposit.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </Pane>
+                                    <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="109.0" text="Deposits">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="181.0" spacing="25.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="24.0" text="ID">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="3.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label prefHeight="17.0" prefWidth="29.0" text="Date">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label prefHeight="17.0" prefWidth="50.0" text="Amount">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <ListView fx:id="listViewTransactionsTabDeposits" prefHeight="205.0" prefWidth="159.0" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="176.0" layoutY="13.0" prefHeight="278.0" prefWidth="164.0" spacing="5.0">
+                                 <children>
+                                    <Pane maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="200.0">
+                                       <children>
+                                          <ImageView fitHeight="60.0" fitWidth="30.0" layoutX="67.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@icons/Make%20Withdrawal.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </Pane>
+                                    <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="109.0" text="Withdrawals">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="181.0" spacing="25.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="24.0" text="ID">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="3.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label prefHeight="17.0" prefWidth="29.0" text="Date">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label prefHeight="17.0" prefWidth="50.0" text="Amount">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <ListView fx:id="listViewTransactionsTabWithdrawals" prefHeight="205.0" prefWidth="159.0" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="346.0" layoutY="13.0" prefHeight="278.0" prefWidth="252.0" spacing="5.0">
+                                 <children>
+                                    <Pane maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="200.0">
+                                       <children>
+                                          <ImageView fitHeight="60.0" fitWidth="30.0" layoutX="111.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@icons/Make%20Account%20Transfer.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </Pane>
+                                    <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="109.0" text="Transfers">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="181.0" spacing="25.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="24.0" text="ID">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="3.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label prefHeight="17.0" prefWidth="29.0" text="Date">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label prefHeight="17.0" prefWidth="50.0" text="Amount">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label prefHeight="17.0" prefWidth="59.0" text="To">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <ListView fx:id="listViewTransactionsTabTransfers" prefHeight="205.0" prefWidth="159.0" />
+                                 </children>
+                              </VBox>
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+            <HBox prefHeight="19.0" prefWidth="588.0" spacing="10.0">
+               <children>
+                  <Separator maxWidth="1.7976931348623157E308" prefHeight="18.0" prefWidth="517.0">
+                     <opaqueInsets>
+                        <Insets top="10.0" />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="3.0" top="12.0" />
+                     </padding>
+                  </Separator>
+                  <Button fx:id="buttonLogout" mnemonicParsing="false" onMouseClicked="#buttonLogoutClicked" prefHeight="25.0" prefWidth="83.0" text="Logout" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Pane fx:id="paneOperatorLogin" layoutX="13.0" layoutY="198.0" prefHeight="258.0" prefWidth="606.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="238.0" layoutX="10.0" layoutY="10.0" stroke="WHITE" strokeType="INSIDE" width="587.0" />
+            <Label fx:id="welcomeLabel" layoutX="88.0" layoutY="28.0" prefHeight="27.0" prefWidth="401.0" text="Welcome, please log in to continue">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="117.0" fitWidth="166.0" layoutX="88.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/Login.png" />
+               </image>
+            </ImageView>
+            <VBox fx:id="vBoxOperatorLogin" layoutX="272.0" layoutY="82.0" prefHeight="95.0" prefWidth="245.0" spacing="8.0">
+               <children>
+                  <HBox prefHeight="25.0" prefWidth="235.0">
+                     <children>
+                        <Label maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="80.0" text="Operator:">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="comboBoxOperator" maxWidth="1.7976931348623157E308" onMouseClicked="#initialization" prefHeight="25.0" prefWidth="165.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="25.0" prefWidth="235.0">
+                     <children>
+                        <Label maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="80.0" text="Password:">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="passwordFieldPassword" alignment="CENTER" prefHeight="25.0" prefWidth="165.0" />
+                     </children>
+                  </HBox>
+                  <HBox maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="200.0">
+                     <children>
+                        <Pane prefHeight="25.0" prefWidth="80.0" />
+                        <Button fx:id="buttonLogin" mnemonicParsing="false" onMouseClicked="#LoginButtonClicked" prefHeight="25.0" prefWidth="164.0" text="Login" />
+                     </children>
+                  </HBox>
+                  <Label fx:id="labelAccessDenied" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="163.0" text="Access Denied" textFill="RED" visible="false">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <padding>
+                        <Insets left="120.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
